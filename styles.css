@@ -17,13 +17,15 @@
 }
 
 :root {
-  --linen: #f5f5ef;   /* main background */
-  --cream: #fbf5e5;   /* about panel */
-  --blush: #e4cfc2;   /* Life Reset + booking sections */
-  --clay:  #997660;   /* booking button */
-  --cocoa: #443732;   /* hero + softer body text */
-  --ink:   #000;
-  --line:  #231f20;   /* outlines, botanical drawings */
+  --linen: #f7f3ec;   /* main background (warm ivory) */
+  --cream: #f1e8da;   /* about panel (warm sand) */
+  --blush: #e4cfc2;   /* The Life Reset */
+  --blush-light: #f2e6de;   /* Ways to work with me + footer */
+  --clay:  #4a3b34;   /* "Let's connect" button */
+  --clay-hover: #5e4b42;
+  --cocoa: #3b302b;   /* all text: soft espresso */
+  --ink:   var(--cocoa);
+  --line:  #3b302b;   /* outlines, botanical drawings */
 
   /* The draft is set in Alice; Canva generated its bold/italic, and browsers do the same.
      Lovelace (the "Hi, I'm Annabelle" face) isn't free for web use — Italiana stands in. */
@@ -324,18 +326,10 @@ a { color: inherit; }
 /* ---------- 7 · Ways to work with me ---------- */
 
 .work {
-  padding: 0 var(--gutter) var(--space);
-  background: var(--blush);
+  padding: var(--space) var(--gutter);
+  background: var(--blush-light);
 }
 
-/* Short rule separating this section from The Life Reset (same background) */
-.work::before {
-  content: "";
-  display: block;
-  width: 4rem;
-  margin: 0 auto var(--space);
-  border-top: 1px solid rgb(35 31 32 / .35);
-}
 
 .work h2 {
   font-size: clamp(1.5rem, 2.6vw, 1.75rem);
@@ -381,25 +375,25 @@ a { color: inherit; }
   width: fit-content;
   margin: 1.5rem auto 0;
   padding: .45em 2.5em .5em;
-  border: 1.5px solid var(--line);
+  border: 0;
   border-radius: 999px;
   background: var(--clay);
-  color: var(--ink);
+  color: var(--linen);
   font-size: clamp(1.15rem, 2.2vw, 1.4rem);
   text-align: center;
   text-decoration: none;
   text-wrap: balance;
   transition: background-color .2s ease;
 }
-.button:hover { background: #a9866f; }
+.button:hover { background: var(--clay-hover); }
 
 
 /* ---------- Footer ---------- */
 
 .site-footer {
   padding: 1.5rem var(--gutter) 1.75rem;
-  border-top: 1px solid rgb(35 31 32 / .18);
-  background: var(--blush);
+  border-top: 1px solid rgb(59 48 43 / .15);
+  background: var(--blush-light);
   color: var(--cocoa);
   font-size: .78rem;
   letter-spacing: .12em;
