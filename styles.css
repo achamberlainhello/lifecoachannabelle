@@ -76,7 +76,7 @@ a { color: inherit; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: clamp(34rem, 100svh, 58rem);
+  min-height: clamp(32rem, 86svh, 52rem);
   color: var(--cocoa);
 }
 
@@ -111,7 +111,7 @@ a { color: inherit; }
   flex: 1;
   display: grid;
   place-content: center;
-  padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) clamp(7rem, 14vw, 10rem);
+  padding: clamp(2.5rem, 6vw, 4rem) var(--gutter) clamp(5rem, 10vw, 7rem);
   text-align: center;
 }
 
@@ -137,7 +137,7 @@ a { color: inherit; }
   position: absolute;
   right: -1.3%;
   bottom: -1px;
-  width: clamp(7.5rem, 18vw, 16rem);
+  width: clamp(6.5rem, 14vw, 12.5rem);
   pointer-events: none;
 }
 
@@ -145,7 +145,7 @@ a { color: inherit; }
 /* ---------- 2 · "Right now you're trying…" ---------- */
 
 .intro {
-  padding: 0 var(--gutter) var(--space);
+  padding: calc(var(--space) * .5) var(--gutter) var(--space);
   text-align: center;
 }
 
@@ -187,7 +187,8 @@ a { color: inherit; }
   width: 100%;
   height: clamp(15rem, 33vw, 30rem);
   object-fit: cover;
-  opacity: .75;   /* the draft shows this photo at 75% over the linen background */
+  object-position: 50% 40%;
+  opacity: .85;   /* softened slightly over the linen background, as in the draft */
 }
 
 .what-if__text {
@@ -284,23 +285,23 @@ a { color: inherit; }
 }
 
 .program__inner {
-  max-width: 50rem;
+  max-width: 46rem;
   margin-inline: auto;
-  font-size: clamp(.98rem, 1.6vw, 1.1rem);
-  line-height: 1.4;
-  letter-spacing: .04em;
-  text-transform: uppercase;
+  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  line-height: 1.45;
 }
 
 .program h2 {
   font-size: clamp(1.35rem, 2.3vw, 1.5rem);
   font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
 }
 
-.program__intro { margin-top: clamp(1.75rem, 3.5vw, 2.5rem); }
+.program__intro { margin-top: clamp(1.5rem, 3vw, 2rem); }
 
-.program__list { margin-top: 1.4em; padding-left: 1.6em; }
-.program__list li + li { margin-top: 1.35em; }
+.program__list { margin-top: 1em; padding-left: 1.4em; }
+.program__list li + li { margin-top: .8em; }
 .program__list li::marker { font-size: .85em; }
 
 .program__close {
@@ -325,6 +326,15 @@ a { color: inherit; }
 .work {
   padding: 0 var(--gutter) var(--space);
   background: var(--blush);
+}
+
+/* Short rule separating this section from The Life Reset (same background) */
+.work::before {
+  content: "";
+  display: block;
+  width: 4rem;
+  margin: 0 auto var(--space);
+  border-top: 1px solid rgb(35 31 32 / .35);
 }
 
 .work h2 {
@@ -358,13 +368,19 @@ a { color: inherit; }
 .offers p { margin-top: 1rem; }
 .offers p + p { margin-top: 1.4rem; }
 
-.work__close { text-align: center; }
+.work__close { max-width: 36em; text-align: center; }
+
+.work__close strong {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: clamp(1.2rem, 2vw, 1.35rem);
+}
 
 .button {
   display: block;
-  max-width: 54.5rem;
-  margin: 1.1rem auto 0;
-  padding: .45em 1.25em .5em;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+  padding: .45em 2.5em .5em;
   border: 1.5px solid var(--line);
   border-radius: 999px;
   background: var(--clay);
