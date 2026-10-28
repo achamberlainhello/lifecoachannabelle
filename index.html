@@ -128,5 +128,12 @@
     </details>
   </footer>
 
+  <script>
+    // Light deterrent: no right-click "Save image" or drag-to-desktop on images
+    for (const type of ["contextmenu", "dragstart"]) {
+      document.addEventListener(type, e => { if (e.target.tagName === "IMG") e.preventDefault(); });
+    }
+  </script>
+
 </body>
 </html>
