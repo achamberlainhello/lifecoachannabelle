@@ -17,15 +17,15 @@
 }
 
 :root {
-  --linen: #f7f3ec;   /* main background (warm ivory) */
-  --cream: #f1e8da;   /* about panel (warm sand) */
-  --blush: #e4cfc2;   /* The Life Reset */
-  --blush-light: #f2e6de;   /* Ways to work with me + footer */
-  --clay:  #4a3b34;   /* "Let's connect" button */
-  --clay-hover: #5e4b42;
-  --cocoa: #3b302b;   /* all text: soft espresso */
+  --linen: #fcf8f6;   /* main background (white with a pink hint) */
+  --cream: #f7eae5;   /* about panel (pale petal) */
+  --blush: #f1d9d1;   /* The Life Reset */
+  --blush-light: #faefeb;   /* Ways to work with me + footer */
+  --clay:  #a15e58;   /* "Let's connect" button (dusty rose) */
+  --clay-hover: #8f504a;
+  --cocoa: #4a3933;   /* all text: warm brown */
   --ink:   var(--cocoa);
-  --line:  #3b302b;   /* outlines, botanical drawings */
+  --line:  #4a3933;   /* outlines, botanical drawings */
 
   /* The draft is set in Alice; Canva generated its bold/italic, and browsers do the same.
      Lovelace (the "Hi, I'm Annabelle" face) isn't free for web use — Italiana stands in. */
@@ -378,7 +378,7 @@ a { color: inherit; }
   border: 0;
   border-radius: 999px;
   background: var(--clay);
-  color: var(--linen);
+  color: #fff;
   font-size: clamp(1.15rem, 2.2vw, 1.4rem);
   text-align: center;
   text-decoration: none;
@@ -392,7 +392,7 @@ a { color: inherit; }
 
 .site-footer {
   padding: 1.5rem var(--gutter) 1.75rem;
-  border-top: 1px solid rgb(59 48 43 / .15);
+  border-top: 1px solid rgb(161 94 88 / .2);
   background: var(--blush-light);
   color: var(--cocoa);
   font-size: .78rem;
