@@ -149,7 +149,7 @@ a { color: inherit; }
 .hero__floral--left {
   right: auto;
   left: -1.3%;
-  width: clamp(5rem, 10.5vw, 9.5rem);   /* about half the right-hand one */
+  width: clamp(6.5rem, 14.5vw, 13rem);   /* about 70% of the right-hand one */
   scale: -1 1;   /* mirror image of the right-hand drawing */
 }
 
